@@ -5,7 +5,7 @@ pipeline {
  
         stage('Clone Code') {
             steps {
-                git 'https://github.com/lakshmisailaja-cloud/3-tier-app.git' 
+                git 'https://github.com/lakshmisailaja-cloud/3-tier-app.git'  
             }
         }
 
