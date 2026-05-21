@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker rm -f myapp || true'
-                sh 'docker run -d -p 80:80 --name myapp nginx'
+                sh 'docker run -d -p 80:80 --name myapp -v $(pwd):/usr/share/nginx/html nginx'
             }
         }
     }
