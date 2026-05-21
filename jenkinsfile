@@ -3,21 +3,27 @@ pipeline {
 
     stages {
 
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/lakshmisailaja-cloud/3-tier-app.git'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo 'Building Application'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing the application...'
+                echo 'Testing Application'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
+                echo 'Deploying Application'
             }
         }
     }
